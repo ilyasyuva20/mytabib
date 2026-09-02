@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Calendar, Menu, X, Globe } from 'lucide-react';
+import { Calendar, Menu, X, Globe, Sun, Moon } from 'lucide-react';
 import Logo from './Logo';
 import { useLanguage } from '../context/LanguageContext';
+import { useTheme } from '../context/ThemeContext';
 import WhatsAppIcon from './WhatsAppIcon';
 import InstagramIcon from './InstagramIcon';
 import YouTubeIcon from './YouTubeIcon';
 
 export default function Navbar() {
   const { lang, toggleLanguage, t } = useLanguage();
+  const { theme, toggleTheme } = useTheme();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
@@ -138,6 +140,15 @@ export default function Navbar() {
             >
               <Globe className="w-3.5 h-3.5 text-[#00C4FA]" />
               <span>{lang === 'en' ? 'العربية' : 'English'}</span>
+            </button>
+
+            {/* Theme Switcher */}
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-full border border-white/20 hover:border-[#00C4FA] text-gray-200 hover:text-[#00C4FA] bg-white/5 transition-all duration-300"
+              title={theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+            >
+              {theme === 'dark' ? <Sun className="w-4 h-4 text-[#D4AF37]" /> : <Moon className="w-4 h-4 text-[#00C4FA]" />}
             </button>
 
             {/* Highlighted Appointment Pill */}

@@ -6,18 +6,13 @@ export const useTheme = () => useContext(ThemeContext);
 
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(() => {
-    // Check local storage first
     if (typeof window !== 'undefined') {
       const storedTheme = localStorage.getItem('theme');
       if (storedTheme) {
         return storedTheme;
       }
-      // If no stored preference, check OS preference
-      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        return 'dark';
-      }
     }
-    return 'light'; // Default
+    return 'light'; // Default to Light theme
   });
 
   useEffect(() => {
