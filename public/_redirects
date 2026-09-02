@@ -1,0 +1,2 @@
+# Cloudflare Workers Assets Redirects Configuration
+# SPA routing is managed by wrangler.jsonc not_found_handling
