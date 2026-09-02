@@ -154,7 +154,7 @@ export default function Treatments() {
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#062B28]/5 border border-[#062B28]/15 text-[#062B28] text-xs font-bold uppercase tracking-wider mb-3"
+            className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#062B28]/5 dark:bg-[#00C4FA]/10 border border-[#062B28]/15 dark:border-[#00C4FA]/30 text-[#062B28] dark:text-[#00C4FA] text-xs font-bold uppercase tracking-wider mb-3"
           >
             <Shield className="w-4 h-4 text-[#00C4FA]" />
             <span>SPECIALIZED MEDICAL NETWORK</span>
@@ -165,7 +165,7 @@ export default function Treatments() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#062B28]"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#062B28] dark:text-white"
           >
             {t.treatments.title}
           </motion.h2>
@@ -175,7 +175,7 @@ export default function Treatments() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className={`text-base sm:text-lg text-[#5A6C67] mt-3 ${lang === 'ar' ? 'font-arabic' : 'font-sans'}`}
+            className={`text-base sm:text-lg text-[#5A6C67] dark:text-gray-300 mt-3 ${lang === 'ar' ? 'font-arabic' : 'font-sans'}`}
           >
             {t.treatments.subtitle}
           </motion.p>
@@ -189,8 +189,8 @@ export default function Treatments() {
               onClick={() => setSelectedFilter(filter)}
               className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 ${
                 selectedFilter === filter
-                  ? 'bg-[#062B28] text-white border border-[#D4AF37]/50 shadow-md'
-                  : 'bg-[#F8FAF9] text-[#5A6C67] border border-[#062B28]/10 hover:border-[#062B28]/30 hover:text-[#062B28]'
+                  ? 'bg-[#062B28] dark:bg-[#00C4FA] text-white dark:text-[#062B28] border border-[#D4AF37]/50 dark:border-transparent shadow-md'
+                  : 'bg-[#F8FAF9] dark:bg-[#021110] text-[#5A6C67] dark:text-gray-400 border border-[#062B28]/10 dark:border-white/10 hover:border-[#062B28]/30 dark:hover:border-white/30 hover:text-[#062B28] dark:hover:text-white'
               }`}
             >
               {filter === 'All' ? t.treatments.all : filter}
@@ -207,7 +207,7 @@ export default function Treatments() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.05 }}
-              className="rounded-3xl p-6 bg-[#F8FAF9] border border-[#062B28]/10 hover:border-[#00C4FA]/40 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+              className="rounded-3xl p-6 bg-[#F8FAF9] dark:bg-[#021110] border border-[#062B28]/10 dark:border-white/10 hover:border-[#00C4FA]/40 dark:hover:border-[#00C4FA]/40 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
             >
               <div>
                 {/* Header Icon */}
@@ -221,7 +221,7 @@ export default function Treatments() {
                 </div>
 
                 {/* Titles */}
-                <h3 className="text-xl font-bold text-[#062B28] mb-1">
+                <h3 className="text-xl font-bold text-[#062B28] dark:text-white mb-1">
                   {lang === 'ar' ? item.nameAr : item.nameEn}
                 </h3>
                 {lang === 'ar' && (
@@ -231,14 +231,14 @@ export default function Treatments() {
                 )}
 
                 {/* Description */}
-                <p className="text-xs text-[#5A6C67] leading-relaxed mb-4">
+                <p className="text-xs text-[#5A6C67] dark:text-gray-400 leading-relaxed mb-4">
                   {lang === 'ar' ? item.descAr : item.descEn}
                 </p>
 
                 {/* Highlights Pills */}
                 <div className="space-y-1.5 mb-6">
                   {item.highlights.map((h, i) => (
-                    <div key={i} className="flex items-center gap-2 text-xs text-[#1A2321] font-medium">
+                    <div key={i} className="flex items-center gap-2 text-xs text-[#1A2321] dark:text-gray-200 font-medium">
                       <CheckCircle2 className="w-3.5 h-3.5 text-[#00C4FA] flex-shrink-0" />
                       <span>{h}</span>
                     </div>

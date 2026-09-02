@@ -124,7 +124,7 @@ export default function OurServices() {
   ];
 
   return (
-    <section id="services" className="py-20 lg:py-28 px-4 sm:px-8 bg-[#F8FAF9] relative overflow-hidden border-t border-[#062B28]/10">
+    <section id="services" className="py-20 lg:py-28 px-4 sm:px-8 bg-[#F8FAF9] dark:bg-[#021110] relative overflow-hidden border-t border-[#062B28]/10 dark:border-white/10">
       {/* Background Decor */}
       <div className="absolute top-1/3 left-0 w-80 h-80 bg-[#00C4FA]/5 rounded-full blur-3xl pointer-events-none" />
 
@@ -135,7 +135,7 @@ export default function OurServices() {
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#062B28] text-white border border-[#D4AF37]/30 text-xs font-bold uppercase tracking-wider mb-3 shadow-md"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#062B28] dark:bg-[#00C4FA]/10 text-white dark:text-[#00C4FA] border border-[#D4AF37]/30 dark:border-[#00C4FA]/30 text-xs font-bold uppercase tracking-wider mb-3 shadow-md"
           >
             <Sparkles className="w-4 h-4 text-[#00C4FA]" />
             <span>END-TO-END CARE CONCIERGE</span>
@@ -146,7 +146,7 @@ export default function OurServices() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#062B28]"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#062B28] dark:text-white"
           >
             {t.services.title}
           </motion.h2>
@@ -177,7 +177,7 @@ export default function OurServices() {
                 className={`group cursor-pointer rounded-3xl p-6 transition-all duration-300 relative overflow-hidden flex flex-col justify-between ${
                   isHighlight
                     ? 'bg-[#062B28] text-white border-2 border-[#D4AF37] shadow-xl shadow-[#062B28]/25 transform hover:-translate-y-1'
-                    : 'bg-white text-[#1A2321] border border-[#062B28]/10 hover:border-[#00C4FA]/50 shadow-sm hover:shadow-xl hover:-translate-y-1'
+                    : 'bg-white dark:bg-[#041F1D] text-[#1A2321] dark:text-gray-200 border border-[#062B28]/10 dark:border-white/10 hover:border-[#00C4FA]/50 shadow-sm hover:shadow-xl hover:-translate-y-1'
                 }`}
               >
                 {/* Subtle Glow & Highlight Badge */}
@@ -193,13 +193,13 @@ export default function OurServices() {
                   <div className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110 ${
                     isHighlight
                       ? 'bg-[#00C4FA]/20 text-[#00C4FA] border border-[#00C4FA]/30'
-                      : 'bg-[#062B28]/8 text-[#062B28] group-hover:bg-[#062B28] group-hover:text-[#00C4FA]'
+                      : 'bg-[#062B28]/8 dark:bg-[#00C4FA]/10 text-[#062B28] dark:text-[#00C4FA] group-hover:bg-[#062B28] group-hover:text-[#00C4FA]'
                   }`}>
                     <service.icon className="w-6 h-6" />
                   </div>
 
                   {/* Title & Arabic subtitle */}
-                  <h3 className={`text-lg font-bold mb-1 leading-snug ${isHighlight ? 'text-white' : 'text-[#062B28]'}`}>
+                  <h3 className={`text-lg font-bold mb-1 leading-snug ${isHighlight ? 'text-white' : 'text-[#062B28] dark:text-white'}`}>
                     {lang === 'ar' ? service.titleAr : service.titleEn}
                   </h3>
                   {lang === 'ar' && (
@@ -209,14 +209,14 @@ export default function OurServices() {
                   )}
 
                   {/* Description */}
-                  <p className={`text-xs leading-relaxed ${isHighlight ? 'text-gray-200' : 'text-[#5A6C67]'}`}>
+                  <p className={`text-xs leading-relaxed ${isHighlight ? 'text-gray-200' : 'text-[#5A6C67] dark:text-gray-400'}`}>
                     {lang === 'ar' ? service.descAr : service.descEn}
                   </p>
                 </div>
 
                 {/* Footer Action Arrow */}
                 <div className={`mt-6 pt-4 border-t flex items-center justify-between text-xs font-bold ${
-                  isHighlight ? 'border-white/15 text-[#00C4FA]' : 'border-[#062B28]/10 text-[#062B28] group-hover:text-[#00A2D9]'
+                  isHighlight ? 'border-white/15 text-[#00C4FA]' : 'border-[#062B28]/10 dark:border-white/10 text-[#062B28] dark:text-[#00A2D9] group-hover:text-[#00A2D9]'
                 }`}>
                   <span>{lang === 'ar' ? 'عرض التفاصيل' : 'View Details'}</span>
                   <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -234,12 +234,12 @@ export default function OurServices() {
                 initial={{ opacity: 0, scale: 0.9, y: 20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.9, y: 20 }}
-                className="relative w-full max-w-xl bg-white text-[#1A2321] rounded-3xl p-6 sm:p-8 border border-[#062B28]/20 shadow-2xl overflow-hidden"
+                className="relative w-full max-w-xl bg-white dark:bg-[#062B28] text-[#1A2321] dark:text-white rounded-3xl p-6 sm:p-8 border border-[#062B28]/20 dark:border-white/20 shadow-2xl overflow-hidden"
               >
                 {/* Close Button */}
                 <button
                   onClick={() => setActiveService(null)}
-                  className="absolute top-4 right-4 p-2 rounded-full bg-[#062B28]/10 text-[#062B28] hover:bg-[#062B28] hover:text-white transition-colors"
+                  className="absolute top-4 right-4 p-2 rounded-full bg-[#062B28]/10 dark:bg-white/10 text-[#062B28] dark:text-white hover:bg-[#062B28] dark:hover:bg-white hover:text-white dark:hover:text-[#062B28] transition-colors"
                 >
                   <X className="w-5 h-5" />
                 </button>
@@ -249,7 +249,7 @@ export default function OurServices() {
                     <activeService.icon className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-[#062B28]">
+                    <h3 className="text-xl font-bold text-[#062B28] dark:text-white">
                       {lang === 'ar' ? activeService.titleAr : activeService.titleEn}
                     </h3>
                     {lang === 'ar' && (
@@ -260,7 +260,7 @@ export default function OurServices() {
                   </div>
                 </div>
 
-                <p className="text-sm text-[#5A6C67] mb-6 leading-relaxed">
+                <p className="text-sm text-[#5A6C67] dark:text-gray-300 mb-6 leading-relaxed">
                   {lang === 'ar' ? activeService.descAr : activeService.descEn}
                 </p>
 

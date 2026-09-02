@@ -32,7 +32,7 @@ export default function Hero() {
           />
           {/* Dark overlay for readability and premium feel */}
           <div className="absolute inset-0 bg-[#041F1D]/80 mix-blend-multiply" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#041F1D]/60 via-transparent to-[#F8FAF9]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#041F1D]/60 via-transparent to-[#F8FAF9] dark:to-[#021110]" />
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center text-center mt-12 sm:mt-16">
@@ -125,7 +125,7 @@ export default function Hero() {
       </section>
 
       {/* Interactive Flight Arc Section (Placed below the main banner on solid background) */}
-      <section className="bg-[#F8FAF9] py-16 px-4 sm:px-8">
+      <section className="bg-[#F8FAF9] dark:bg-[#021110] py-16 px-4 sm:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

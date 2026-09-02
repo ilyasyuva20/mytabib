@@ -28,7 +28,7 @@ export default function AboutUs() {
   ];
 
   return (
-    <section id="about" className="py-20 lg:py-28 px-4 sm:px-8 bg-white border-t border-[#062B28]/10 relative overflow-hidden">
+    <section id="about" className="py-20 lg:py-28 px-4 sm:px-8 bg-white dark:bg-[#041F1D] border-t border-[#062B28]/10 dark:border-white/10 relative overflow-hidden">
       {/* Background Decorative Accent */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-[#00C4FA]/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#D4AF37]/5 rounded-full blur-3xl pointer-events-none" />
@@ -40,7 +40,7 @@ export default function AboutUs() {
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#062B28]/5 border border-[#062B28]/15 text-[#062B28] text-xs font-bold uppercase tracking-wider mb-3"
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#062B28]/5 border border-[#062B28]/15 dark:border-[#00C4FA]/30 dark:bg-[#00C4FA]/10 text-[#062B28] dark:text-[#00C4FA] text-xs font-bold uppercase tracking-wider mb-3"
           >
             <HeartHandshake className="w-4 h-4 text-[#00C4FA]" />
             <span>{t.about.subTitle}</span>
@@ -51,7 +51,7 @@ export default function AboutUs() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#062B28]"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#062B28] dark:text-white"
           >
             {t.about.title}
           </motion.h2>
@@ -62,7 +62,7 @@ export default function AboutUs() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="text-base sm:text-lg text-[#5A6C67] font-arabic mt-3"
+              className="text-base sm:text-lg text-[#5A6C67] dark:text-gray-300 font-arabic mt-3"
             >
               رعاية تتجاوز العلاج — جسر التواصل الموثوق بين المرضى الدوليين والرعاية الصحية المتقدمة في الهند
             </motion.p>
@@ -80,18 +80,18 @@ export default function AboutUs() {
             transition={{ duration: 0.7 }}
             className="lg:col-span-7 flex flex-col gap-6"
           >
-            <div className="p-8 lg:p-10 rounded-3xl bg-[#F8FAF9] border border-[#062B28]/10 shadow-sm relative">
+            <div className="p-8 lg:p-10 rounded-3xl bg-[#F8FAF9] dark:bg-[#021110] border border-[#062B28]/10 dark:border-white/10 shadow-sm relative">
               <span className="absolute -top-3 left-8 px-3 py-1 bg-[#062B28] text-[#00C4FA] text-xs font-bold rounded-full">
                 WHY MYTABIB
               </span>
 
-              <h3 className="text-2xl font-bold text-[#062B28] mb-4">
+              <h3 className="text-2xl font-bold text-[#062B28] dark:text-white mb-4">
                 {lang === 'ar' ? 'إزالة عقبات السفر العلاجي الدولي' : 'Removing the Friction from International Medical Travel'}
               </h3>
 
-              <div className="space-y-4 text-base text-[#1A2321] leading-relaxed">
+              <div className="space-y-4 text-base text-[#1A2321] dark:text-gray-200 leading-relaxed">
                 <p>{t.about.leftNarrative1}</p>
-                <p className="font-medium text-[#062B28]">{t.about.leftNarrative2}</p>
+                <p className="font-medium text-[#062B28] dark:text-white">{t.about.leftNarrative2}</p>
               </div>
 
               {/* Arabic Callout Box */}
@@ -107,14 +107,14 @@ export default function AboutUs() {
             {/* 3 Pillar Cards below Left Narrative */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {keyPillars.map((pillar, idx) => (
-                <div key={idx} className="p-4 rounded-2xl bg-white border border-[#062B28]/10 shadow-sm hover:border-[#00C4FA]/40 transition-colors">
+                <div key={idx} className="p-4 rounded-2xl bg-white dark:bg-[#062B28] border border-[#062B28]/10 dark:border-white/10 shadow-sm hover:border-[#00C4FA]/40 transition-colors">
                   <div className="w-9 h-9 rounded-xl bg-[#062B28] text-[#00C4FA] flex items-center justify-center mb-3">
                     <pillar.icon className="w-5 h-5" />
                   </div>
-                  <h4 className="text-xs font-bold text-[#062B28] mb-1">
+                  <h4 className="text-xs font-bold text-[#062B28] dark:text-white mb-1">
                     {lang === 'ar' ? pillar.titleAr : pillar.titleEn}
                   </h4>
-                  <p className="text-[11px] text-[#5A6C67] leading-normal">
+                  <p className="text-[11px] text-[#5A6C67] dark:text-gray-300 leading-normal">
                     {pillar.descEn}
                   </p>
                 </div>
@@ -165,10 +165,10 @@ export default function AboutUs() {
             </div>
 
             {/* Reassurance Stat Badge */}
-            <div className="p-6 rounded-3xl bg-[#F8FAF9] border border-[#062B28]/10 flex items-center justify-between">
+            <div className="p-6 rounded-3xl bg-[#F8FAF9] dark:bg-[#062B28] border border-[#062B28]/10 dark:border-white/10 flex items-center justify-between">
               <div>
-                <span className="text-xs text-[#5A6C67] font-semibold block">ACCURACY & CARE</span>
-                <span className="text-xl font-bold text-[#062B28]">100% Arabic Concierge</span>
+                <span className="text-xs text-[#5A6C67] dark:text-gray-300 font-semibold block">ACCURACY & CARE</span>
+                <span className="text-xl font-bold text-[#062B28] dark:text-white">100% Arabic Concierge</span>
               </div>
               <ShieldCheck className="w-8 h-8 text-[#00C4FA]" />
             </div>
