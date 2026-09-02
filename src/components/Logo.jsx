@@ -6,10 +6,10 @@ export default function Logo({ size = 'medium', variant = 'dark', showTagline = 
 
   // Balanced size presets - adjusted to be slightly smaller and well-proportioned
   const sizeClasses = {
-    small: 'h-7 sm:h-9',
-    medium: 'h-9 sm:h-12',
-    large: 'h-11 sm:h-14',
-    xlarge: 'h-16 sm:h-22'
+    small: 'h-8 sm:h-9',
+    medium: 'h-11 sm:h-12',
+    large: 'h-14 sm:h-16',
+    xlarge: 'h-18 sm:h-22'
   };
 
   const isDarkBg = variant === 'dark' || variant === 'emerald';

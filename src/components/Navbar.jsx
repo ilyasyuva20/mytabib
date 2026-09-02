@@ -182,13 +182,14 @@ export default function Navbar() {
             className="lg:hidden absolute top-20 left-4 right-4 bg-[#062B28] text-white rounded-3xl p-6 border border-[#D4AF37]/30 shadow-2xl shadow-[#062B28]/50 z-50 backdrop-blur-2xl"
           >
             <div className="flex flex-col gap-4">
-              <div className="flex items-center justify-between pb-4 border-b border-white/10">
-                <Logo size="small" variant="dark" />
-                {lang === 'ar' && <span className="text-xs text-[#00C4FA] font-arabic">خدمات بلا حدود</span>}
-              </div>
+              {lang === 'ar' && (
+                <div className="text-xs text-[#00C4FA] font-arabic pb-2 border-b border-white/10 text-end">
+                  خدمات بلا حدود
+                </div>
+              )}
 
-              <div className="flex flex-col gap-2 py-2">
-                {navLinks.map((link) => (
+              <div className="flex flex-col gap-2 py-1">
+                {navLinks.filter(link => link.id !== 'home').map((link) => (
                   <button
                     key={link.id}
                     onClick={() => scrollTo(link.id)}
