@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   FileText, ClipboardCheck, Building2, Calendar, Plane, Car, 
-  Hotel, Languages, Navigation, HeartPulse, Stethoscope, ChevronRight, CheckCircle2, Sparkles, X
+  Hotel, Languages, Navigation, HeartPulse, Stethoscope, ChevronRight, CheckCircle2, Sparkles, X, ImageIcon
 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -18,6 +18,7 @@ export default function OurServices() {
       descEn: "Initial tele-consultation with leading Kerala specialists to discuss symptoms, diagnosis, and preliminary treatment advice.",
       descAr: "استشارة طبية أولية عبر الاتصال المرئي مع كبار الاستشاريين في كيرالا لمناقشة التشخيص وخطة العلاج.",
       icon: Stethoscope,
+      image: "/services/service_consultation.png",
       highlight: false,
       details: ["Review of symptoms prior to travel", "Video call setup with Chief Specialist", "Pre-admission clinical guidance"]
     },
@@ -28,6 +29,7 @@ export default function OurServices() {
       descEn: "Comprehensive translation and evaluation of your medical files by top hospital boards with cost estimates.",
       descAr: "ترجمة وتقييم شامل لتقاريرك الطبية من قبل لجان المستشفيات المختصة مع تقديم تقدير تكلفة معتمد.",
       icon: FileText,
+      image: "/services/service_reports.png",
       highlight: false,
       details: ["Official hospital cost estimation", "Multi-disciplinary doctor review", "Dual Arabic-English report breakdown"]
     },
@@ -38,6 +40,7 @@ export default function OurServices() {
       descEn: "Direct access to NABH/JCI accredited centers of excellence and renowned senior surgeons across Kerala.",
       descAr: "ربط مباشر بأفضل المستشفيات المعتمدة دولياً وأبرز كبار الجراحين في ولاية كيرالا.",
       icon: Building2,
+      image: "/services/service_hospital.png",
       highlight: false,
       details: ["JCI & NABH accredited hospitals", "Direct doctor appointment confirmation", "Second medical opinion options"]
     },
@@ -48,6 +51,7 @@ export default function OurServices() {
       descEn: "Priority queue placement ensuring zero waiting time upon your arrival at the hospital clinic.",
       descAr: "حجز مواعيد أولوية تضمن عدم الانتظار والدخول المباشر للطبيب فور وصولك كيرالا.",
       icon: Calendar,
+      image: "/services/service_reports.png",
       highlight: false,
       details: ["Priority patient queueing", "Flexible rescheduling support", "Surgical theatre slot lock"]
     },
@@ -58,6 +62,7 @@ export default function OurServices() {
       descEn: "Fast-track Medical Visa invitation letters issued by certified hospitals to ensure quick embassy approval.",
       descAr: "إصدار خطابات الدعوة الطبية الرسمية للتأشيرة السريعة مع متابعة وإرشاد سفارات كيرالا.",
       icon: Plane,
+      image: "/services/service_travel_visa.png",
       highlight: false,
       details: ["Official hospital invitation letter", "Attendant visa processing for family", "Flight itinerary coordination"]
     },
@@ -68,6 +73,7 @@ export default function OurServices() {
       descEn: "Warm VIP reception at Kochi / Trivandrum Airport with private vehicle transfer and dedicated assistant.",
       descAr: "استقبال خاص في المطار بمدينة كوتشي أو تريفاندروم وسائق خاص ينقلك مباشرة للوجهة.",
       icon: Car,
+      image: "/services/service_airport_pickup.png",
       highlight: false,
       details: ["24/7 Flight tracking", "Private luxury vehicle transfer", "Wheelchair / ambulance assistance if needed"]
     },
@@ -78,6 +84,7 @@ export default function OurServices() {
       descEn: "Curated options from luxury hotels to fully furnished serviced apartments near hospital centers.",
       descAr: "خيارات إقامة مختارة تشمل الفنادق الفاخرة أو الشقق المفروشة المجهزة بالكامل بالقرب من المستشفيات.",
       icon: Hotel,
+      image: "/services/service_accommodation.png",
       highlight: false,
       details: ["Kitchen-equipped apartments for families", "Proximity to medical centers", "Halal food & Arabic grocery access"]
     },
@@ -88,7 +95,8 @@ export default function OurServices() {
       descEn: "Full-time dedicated Arabic translator accompanying you during all doctor visits, procedures, and daily needs.",
       descAr: "مترجم ومرافق شخصي يتحدث العربية طوال فترة إقامتك وخلال جميع الجلسات والفحوصات الطبية.",
       icon: Languages,
-      highlight: true, // Subtly highlighted badge
+      image: "/services/service_translator.png",
+      highlight: true,
       details: ["Native Arabic medical translators", "24/7 On-call translation hotline", "Prescription & discharge summary translation"]
     },
     {
@@ -98,6 +106,7 @@ export default function OurServices() {
       descEn: "Dedicated chauffeur-driven vehicle for hospital commutes, pharmacy trips, and local excursions.",
       descAr: "سيارة خاصة وسائق تحت طلبك للتنقل اليومي بين مقر الإقامة، المستشفى، والصيدليات.",
       icon: Navigation,
+      image: "/services/service_airport_pickup.png",
       highlight: false,
       details: ["Chauffeur on demand", "Discounts for long-stay patients", "Safe & clean climate-controlled vehicles"]
     },
@@ -108,6 +117,7 @@ export default function OurServices() {
       descEn: "Daily care management, nursing coordination, specialized dietary plans, and Kerala rehab options.",
       descAr: "إدارة يومية للعناية، التنسيق مع التمريض، تقديم وجبات مخصصة، وجلسات إعادة التأهيل.",
       icon: HeartPulse,
+      image: "/services/service_recovery.png",
       highlight: false,
       details: ["In-hospital daily patient check-in", "Customized dietary management", "Post-op physiotherapy & Kerala wellness"]
     },
@@ -118,6 +128,7 @@ export default function OurServices() {
       descEn: "Continued connection with your treating doctor after you return home to monitor long-term recovery.",
       descAr: "استمرار التواصل والمتابعة مع طبيبك المعالج بعد عودتك إلى وطنك لضمان تمام الشفاء.",
       icon: ClipboardCheck,
+      image: "/services/service_consultation.png",
       highlight: false,
       details: ["Tele-consultation follow-up sessions", "Medication dispatch coordination", "Long-term medical record maintenance"]
     }
@@ -162,7 +173,7 @@ export default function OurServices() {
           </motion.p>
         </div>
 
-        {/* 11 Services Non-Cluttered Grid */}
+        {/* 11 Services Non-Cluttered Grid with AI Generated Images */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {servicesList.map((service, index) => {
             const isHighlight = service.highlight;
@@ -174,59 +185,80 @@ export default function OurServices() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.04 }}
                 onClick={() => setActiveService(service)}
-                className={`group cursor-pointer rounded-3xl p-6 transition-all duration-300 relative overflow-hidden flex flex-col justify-between ${
+                className={`group cursor-pointer rounded-3xl overflow-hidden transition-all duration-300 relative flex flex-col justify-between ${
                   isHighlight
                     ? 'bg-[#062B28] text-white border-2 border-[#D4AF37] shadow-xl shadow-[#062B28]/25 transform hover:-translate-y-1'
                     : 'bg-white dark:bg-[#041F1D] text-[#1A2321] dark:text-gray-200 border border-[#062B28]/10 dark:border-white/10 hover:border-[#00C4FA]/50 shadow-sm hover:shadow-xl hover:-translate-y-1'
                 }`}
               >
-                {/* Subtle Glow & Highlight Badge */}
-                {isHighlight && (
-                  <div className="absolute top-3 right-3 px-2.5 py-0.5 rounded-full bg-[#D4AF37] text-[#062B28] text-[10px] font-bold uppercase tracking-wider flex items-center gap-1 shadow-sm">
-                    <Sparkles className="w-3 h-3" />
-                    <span>FEATURED SERVICE</span>
-                  </div>
-                )}
+                {/* AI Service Image Header */}
+                <div className="relative h-44 w-full overflow-hidden bg-gray-100 dark:bg-gray-800">
+                  <img
+                    src={service.image}
+                    alt={service.titleEn}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                    loading="lazy"
+                  />
+                  {/* Overlay Gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
-                <div>
-                  {/* Icon Header */}
-                  <div className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110 ${
-                    isHighlight
-                      ? 'bg-[#00C4FA]/20 text-[#00C4FA] border border-[#00C4FA]/30'
-                      : 'bg-[#062B28]/8 dark:bg-[#00C4FA]/10 text-[#062B28] dark:text-[#00C4FA] group-hover:bg-[#062B28] group-hover:text-[#00C4FA]'
-                  }`}>
-                    <service.icon className="w-6 h-6" />
+                  {/* AI Visual Badge */}
+                  <div className="absolute top-3 left-3 px-2 py-0.5 rounded-md bg-black/40 backdrop-blur-md border border-white/20 text-white text-[9px] font-semibold flex items-center gap-1">
+                    <ImageIcon className="w-3 h-3 text-[#00C4FA]" />
+                    <span>AI Visual Concierge</span>
                   </div>
 
-                  {/* Title & Arabic subtitle */}
-                  <h3 className={`text-lg font-bold mb-1 leading-snug ${isHighlight ? 'text-white' : 'text-[#062B28] dark:text-white'}`}>
-                    {lang === 'ar' ? service.titleAr : service.titleEn}
-                  </h3>
-                  {lang === 'ar' && (
-                    <span className={`text-xs font-sans block mb-3 font-semibold ${isHighlight ? 'text-[#00C4FA]' : 'text-[#00A2D9]'}`}>
-                      {service.titleEn}
-                    </span>
+                  {/* Featured Badge */}
+                  {isHighlight && (
+                    <div className="absolute top-3 right-3 px-2.5 py-0.5 rounded-full bg-[#D4AF37] text-[#062B28] text-[10px] font-bold uppercase tracking-wider flex items-center gap-1 shadow-md">
+                      <Sparkles className="w-3 h-3" />
+                      <span>FEATURED</span>
+                    </div>
                   )}
 
-                  {/* Description */}
-                  <p className={`text-xs leading-relaxed ${isHighlight ? 'text-gray-200' : 'text-[#5A6C67] dark:text-gray-400'}`}>
-                    {lang === 'ar' ? service.descAr : service.descEn}
-                  </p>
+                  {/* Floating Icon Badge */}
+                  <div className={`absolute -bottom-4 left-5 w-10 h-10 rounded-xl flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-110 ${
+                    isHighlight
+                      ? 'bg-[#D4AF37] text-[#062B28]'
+                      : 'bg-[#062B28] dark:bg-[#00C4FA] text-[#00C4FA] dark:text-[#062B28]'
+                  }`}>
+                    <service.icon className="w-5 h-5" />
+                  </div>
                 </div>
 
-                {/* Footer Action Arrow */}
-                <div className={`mt-6 pt-4 border-t flex items-center justify-between text-xs font-bold ${
-                  isHighlight ? 'border-white/15 text-[#00C4FA]' : 'border-[#062B28]/10 dark:border-white/10 text-[#062B28] dark:text-[#00A2D9] group-hover:text-[#00A2D9]'
-                }`}>
-                  <span>{lang === 'ar' ? 'عرض التفاصيل' : 'View Details'}</span>
-                  <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                {/* Card Content Body */}
+                <div className="p-6 pt-7 flex-1 flex flex-col justify-between">
+                  <div>
+                    {/* Title & Arabic subtitle */}
+                    <h3 className={`text-base font-bold mb-1 leading-snug ${isHighlight ? 'text-white' : 'text-[#062B28] dark:text-white'}`}>
+                      {lang === 'ar' ? service.titleAr : service.titleEn}
+                    </h3>
+                    {lang === 'ar' && (
+                      <span className={`text-xs font-sans block mb-2 font-semibold ${isHighlight ? 'text-[#00C4FA]' : 'text-[#00A2D9]'}`}>
+                        {service.titleEn}
+                      </span>
+                    )}
+
+                    {/* Description */}
+                    <p className={`text-xs leading-relaxed line-clamp-3 ${isHighlight ? 'text-gray-200' : 'text-[#5A6C67] dark:text-gray-400'}`}>
+                      {lang === 'ar' ? service.descAr : service.descEn}
+                    </p>
+                  </div>
+
+                  {/* Footer Action Arrow */}
+                  <div className={`mt-5 pt-3 border-t flex items-center justify-between text-xs font-bold ${
+                    isHighlight ? 'border-white/15 text-[#00C4FA]' : 'border-[#062B28]/10 dark:border-white/10 text-[#062B28] dark:text-[#00A2D9] group-hover:text-[#00A2D9]'
+                  }`}>
+                    <span>{lang === 'ar' ? 'عرض التفاصيل' : 'View Details'}</span>
+                    <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </div>
                 </div>
               </motion.div>
             );
           })}
         </div>
 
-        {/* Modal Drawer for Service Details */}
+        {/* Modal Drawer for Service Details with AI Hero Image */}
         <AnimatePresence>
           {activeService && (
             <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-md">
@@ -234,70 +266,84 @@ export default function OurServices() {
                 initial={{ opacity: 0, scale: 0.9, y: 20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.9, y: 20 }}
-                className="relative w-full max-w-xl bg-white dark:bg-[#062B28] text-[#1A2321] dark:text-white rounded-3xl p-6 sm:p-8 border border-[#062B28]/20 dark:border-white/20 shadow-2xl overflow-hidden"
+                className="relative w-full max-w-xl bg-white dark:bg-[#062B28] text-[#1A2321] dark:text-white rounded-3xl border border-[#062B28]/20 dark:border-white/20 shadow-2xl overflow-hidden flex flex-col max-h-[90vh]"
               >
-                {/* Close Button */}
-                <button
-                  onClick={() => setActiveService(null)}
-                  className="absolute top-4 right-4 p-2 rounded-full bg-[#062B28]/10 dark:bg-white/10 text-[#062B28] dark:text-white hover:bg-[#062B28] dark:hover:bg-white hover:text-white dark:hover:text-[#062B28] transition-colors"
-                >
-                  <X className="w-5 h-5" />
-                </button>
+                {/* Modal Top AI Banner Image */}
+                <div className="relative h-52 sm:h-60 w-full overflow-hidden bg-gray-900 flex-shrink-0">
+                  <img
+                    src={activeService.image}
+                    alt={activeService.titleEn}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
 
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-2xl bg-[#062B28] text-[#00C4FA] flex items-center justify-center">
-                    <activeService.icon className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-[#062B28] dark:text-white">
-                      {lang === 'ar' ? activeService.titleAr : activeService.titleEn}
-                    </h3>
-                    {lang === 'ar' && (
-                      <span className="text-sm text-[#00A2D9] font-sans font-bold">
-                        {activeService.titleEn}
-                      </span>
-                    )}
+                  {/* Close Button */}
+                  <button
+                    onClick={() => setActiveService(null)}
+                    className="absolute top-4 right-4 z-10 p-2 rounded-full bg-black/50 text-white hover:bg-white hover:text-[#062B28] transition-colors border border-white/20"
+                  >
+                    <X className="w-5 h-5" />
+                  </button>
+
+                  {/* Title Overlay on Hero Image */}
+                  <div className="absolute bottom-4 left-6 right-6 flex items-center gap-3">
+                    <div className="w-11 h-11 rounded-2xl bg-[#00C4FA] text-[#062B28] flex items-center justify-center shadow-lg flex-shrink-0">
+                      <activeService.icon className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white leading-tight">
+                        {lang === 'ar' ? activeService.titleAr : activeService.titleEn}
+                      </h3>
+                      {lang === 'ar' && (
+                        <span className="text-xs text-[#00C4FA] font-sans font-bold">
+                          {activeService.titleEn}
+                        </span>
+                      )}
+                    </div>
                   </div>
                 </div>
 
-                <p className="text-sm text-[#5A6C67] dark:text-gray-300 mb-6 leading-relaxed">
-                  {lang === 'ar' ? activeService.descAr : activeService.descEn}
-                </p>
+                {/* Modal Scrollable Body */}
+                <div className="p-6 sm:p-8 overflow-y-auto">
+                  <p className="text-sm text-[#5A6C67] dark:text-gray-300 mb-6 leading-relaxed">
+                    {lang === 'ar' ? activeService.descAr : activeService.descEn}
+                  </p>
 
-                <div className="mb-6">
-                  <h4 className="text-xs font-bold text-[#062B28] uppercase tracking-wider mb-3">
-                    {lang === 'ar' ? 'مميزات وركائز الخدمة:' : 'Included Service Highlights:'}
-                  </h4>
-                  <div className="space-y-2">
-                    {activeService.details.map((detail, idx) => (
-                      <div key={idx} className="flex items-center gap-2 text-xs text-[#1A2321] p-2.5 rounded-xl bg-[#F8FAF9] border border-[#062B28]/8">
-                        <CheckCircle2 className="w-4 h-4 text-[#00C4FA] flex-shrink-0" />
-                        <span>{detail}</span>
-                      </div>
-                    ))}
+                  <div className="mb-6">
+                    <h4 className="text-xs font-bold text-[#062B28] dark:text-[#00C4FA] uppercase tracking-wider mb-3">
+                      {lang === 'ar' ? 'مميزات وركائز الخدمة:' : 'Included Service Highlights:'}
+                    </h4>
+                    <div className="space-y-2">
+                      {activeService.details.map((detail, idx) => (
+                        <div key={idx} className="flex items-center gap-2 text-xs text-[#1A2321] dark:text-gray-200 p-2.5 rounded-xl bg-[#F8FAF9] dark:bg-white/5 border border-[#062B28]/8 dark:border-white/10">
+                          <CheckCircle2 className="w-4 h-4 text-[#00C4FA] flex-shrink-0" />
+                          <span>{detail}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
 
-                <div className="flex items-center gap-3 pt-4 border-t border-[#062B28]/10">
-                  <a
-                    href="#appointment"
-                    onClick={() => {
-                      setActiveService(null);
-                      const el = document.getElementById('appointment');
-                      if (el) el.scrollIntoView({ behavior: 'smooth' });
-                    }}
-                    className="flex-1 py-3 rounded-full bg-[#062B28] text-white font-bold text-xs text-center shadow-md hover:bg-[#041F1D]"
-                  >
-                    {t.nav.bookAppointment}
-                  </a>
-                  <a
-                    href="https://wa.me/918547842167?text=Hello%20mytabib,%20I%20would%20like%20more%20information%20about%20your%20services."
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-6 py-3 rounded-full border border-[#25D366] text-[#128C7E] font-bold text-xs hover:bg-[#25D366]/10"
-                  >
-                    WhatsApp
-                  </a>
+                  <div className="flex items-center gap-3 pt-4 border-t border-[#062B28]/10 dark:border-white/10">
+                    <a
+                      href="#appointment"
+                      onClick={() => {
+                        setActiveService(null);
+                        const el = document.getElementById('appointment');
+                        if (el) el.scrollIntoView({ behavior: 'smooth' });
+                      }}
+                      className="flex-1 py-3 rounded-full bg-[#062B28] dark:bg-[#00C4FA] text-white dark:text-[#062B28] font-bold text-xs text-center shadow-md hover:bg-[#041F1D] dark:hover:bg-[#00A2D9] transition-colors"
+                    >
+                      {t.nav.bookAppointment}
+                    </a>
+                    <a
+                      href="https://wa.me/918547842167?text=Hello%20mytabib,%20I%20would%20like%20more%20information%20about%20your%20services."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-6 py-3 rounded-full border border-[#25D366] text-[#128C7E] dark:text-[#25D366] font-bold text-xs hover:bg-[#25D366]/10 transition-colors"
+                    >
+                      WhatsApp
+                    </a>
+                  </div>
                 </div>
               </motion.div>
             </div>
@@ -308,3 +354,4 @@ export default function OurServices() {
     </section>
   );
 }
+

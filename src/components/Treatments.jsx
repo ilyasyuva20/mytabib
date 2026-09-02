@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Bone, Activity, Smile, Heart, Stethoscope, Scale, Sparkles, 
-  Eye, Ear, Leaf, HelpCircle, ArrowRight, CheckCircle2, Shield
+  Eye, Ear, Leaf, HelpCircle, ArrowRight, CheckCircle2, Shield, ImageIcon
 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -19,6 +19,7 @@ export default function Treatments() {
       descEn: 'Robotic knee & hip replacements, complex fracture reconstruction, and arthroscopic sports medicine.',
       descAr: "استبدال الركبة والحوض بالروبوت، ترميم الكسور المعقدة، وجراحات المناظير الرياضية.",
       icon: Bone,
+      image: "/treatments/treatment_ortho.png",
       highlights: ['Robotic Knee Replacement', 'Hip Resurfacing', 'Spinal Fusion'],
       stayDuration: '7 - 14 Days Recovery'
     },
@@ -30,6 +31,7 @@ export default function Treatments() {
       descEn: 'Minimally invasive spine surgery (MISS), disc replacement, and neuro-oncology interventions.',
       descAr: "جراحات العمود الفقري بالمناظير التدخلية، استبدال الديسك، وجراحات الأورام العصبية.",
       icon: Activity,
+      image: "/treatments/treatment_spine.png",
       highlights: ['Micro-Discectomy', 'Spinal Decompression', 'Brain Tumor Resection'],
       stayDuration: '10 - 18 Days Recovery'
     },
@@ -41,6 +43,7 @@ export default function Treatments() {
       descEn: 'All-on-4 / All-on-6 dental implants, full mouth rehabilitation, and aesthetic smile designing.',
       descAr: "زراعة الأسنان الفورية All-on-4/6، إعادة تأهيل الفك الكامل، وتصميم الابتسامة التجميلية.",
       icon: Smile,
+      image: "/treatments/treatment_dental.png",
       highlights: ['Zirconia Implants', 'Full Mouth Rehab', 'Maxillofacial Surgery'],
       stayDuration: '3 - 7 Days'
     },
@@ -52,6 +55,7 @@ export default function Treatments() {
       descEn: 'Coronary artery bypass grafting (CABG), TAVI, heart valve repair, and pediatric cardiology.',
       descAr: "عمليات قلب المفتوح (CABG)، زراعة الصمامات بالقسطرة، وقسطرة الشرايين المعقدة.",
       icon: Heart,
+      image: "/treatments/treatment_cardio.png",
       highlights: ['CABG Bypass', 'TAVI Valve Repair', 'Pediatric Heart Surgery'],
       stayDuration: '12 - 21 Days'
     },
@@ -63,6 +67,7 @@ export default function Treatments() {
       descEn: 'Advanced endoscopic procedures, liver transplant coordination, and GI oncology care.',
       descAr: "مناظير الجهاز الهضمي المتقدمة، زراعة الكبد، وعلاج أورام القناة الهضمية.",
       icon: Stethoscope,
+      image: "/treatments/treatment_gastro.png",
       highlights: ['Liver Transplant', 'ERCP Endoscopy', 'GI Surgery'],
       stayDuration: '14 - 28 Days'
     },
@@ -74,6 +79,7 @@ export default function Treatments() {
       descEn: 'Laparoscopic gastric sleeve, gastric bypass, and metabolic surgery for long-term weight wellness.',
       descAr: "تكميم المعدة بالمنظار، تحويل المسار، وجراحات الأيض للتخلص من السمنة المفرطة.",
       icon: Scale,
+      image: "/services/service_reports.png",
       highlights: ['Laparoscopic Sleeve', 'Roux-en-Y Bypass', 'Post-Op Nutrition'],
       stayDuration: '5 - 10 Days'
     },
@@ -85,6 +91,7 @@ export default function Treatments() {
       descEn: 'High success rate IVF, ICSI, genetic testing (PGD/PGS), and reproductive endocrinology.',
       descAr: "تقنيات الحقن المجهري (IVF/ICSI)، الفحص الجيني للأجنة، وعلاج أسباب تأخر الإنجاب.",
       icon: Sparkles,
+      image: "/services/service_consultation.png",
       highlights: ['IVF / ICSI Cycles', 'Genetic Screening (PGD)', 'Male Infertility Care'],
       stayDuration: '14 - 21 Days'
     },
@@ -96,6 +103,7 @@ export default function Treatments() {
       descEn: 'Femto-LASIK, corneal transplants, advanced cataract phacoemulsification, and retinal surgery.',
       descAr: "عمليات تصحيح النظر بالفيمتو لايزك، زراعة القرنية، وإزالة المياه البيضاء بأحدث التقنيات.",
       icon: Eye,
+      image: "/services/service_hospital.png",
       highlights: ['Femto-LASIK', 'Cataract Phaco', 'Retinal Detachment Repair'],
       stayDuration: '3 - 7 Days'
     },
@@ -107,6 +115,7 @@ export default function Treatments() {
       descEn: 'Cochlear implant surgery, endoscopic sinus surgery, and vocal cord restoration.',
       descAr: "زراعة القوقعة للأطفال والكبار، جراحات الجيوب الأنفية بالمناظير، وجراحات الحنجرة.",
       icon: Ear,
+      image: "/services/service_reports.png",
       highlights: ['Cochlear Implants', 'Endoscopic Sinus', 'Tonsillectomy'],
       stayDuration: '4 - 8 Days'
     },
@@ -118,6 +127,7 @@ export default function Treatments() {
       descEn: 'Authentic Kerala NABH-accredited Ayurvedic treatments, post-stroke rehab, and joint wellness.',
       descAr: "العلاج الطبيعي والتأهيلي بالطب الشعبي الهندي التقليدي المعتمد (الآيورفيدا) للتعافي الشامل.",
       icon: Leaf,
+      image: "/services/service_recovery.png",
       highlights: ['Panchakarma Detox', 'Post-Stroke Rehab', 'Arthritis Management'],
       stayDuration: '14 - 28 Days Wellness'
     },
@@ -129,6 +139,7 @@ export default function Treatments() {
       descEn: 'Oncology, Urology, Dermatology, and Pediatric Surgeries. Submit your medical reports for customized review.',
       descAr: "علاج الأورام، المسالك البولية، الجلدية، وجراحة الأطفال. تواصل معنا لإجراء تقييم شامل.",
       icon: HelpCircle,
+      image: "/services/service_consultation.png",
       highlights: ['Oncology & Chemo', 'Urology & Kidney Stone', 'Custom Medical Review'],
       stayDuration: 'Varies by Case'
     }
@@ -146,7 +157,7 @@ export default function Treatments() {
   };
 
   return (
-    <section id="treatments" className="py-20 lg:py-28 px-4 sm:px-8 bg-white border-t border-[#062B28]/10 relative">
+    <section id="treatments" className="py-20 lg:py-28 px-4 sm:px-8 bg-white dark:bg-[#010908] border-t border-[#062B28]/10 dark:border-white/10 relative transition-colors duration-300">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-12">
@@ -207,17 +218,33 @@ export default function Treatments() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.05 }}
-              className="rounded-3xl p-6 bg-[#F8FAF9] dark:bg-[#021110] border border-[#062B28]/10 dark:border-white/10 hover:border-[#00C4FA]/40 dark:hover:border-[#00C4FA]/40 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+              className="rounded-3xl p-6 bg-[#F8FAF9] dark:bg-[#021110] border border-[#062B28]/10 dark:border-white/10 hover:border-[#00C4FA]/40 dark:hover:border-[#00C4FA]/40 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group overflow-hidden"
             >
               <div>
-                {/* Header Icon */}
-                <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 rounded-2xl bg-[#062B28] text-[#00C4FA] flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform">
-                    <item.icon className="w-6 h-6" />
+                {/* Card Top Image Header */}
+                <div className="relative h-48 -mx-6 -mt-6 mb-5 overflow-hidden bg-[#062B28]/10">
+                  <img 
+                    src={item.image} 
+                    alt={item.nameEn} 
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#F8FAF9] dark:from-[#021110] via-black/20 to-transparent" />
+                  
+                  {/* Floating Icon & Stay Duration Badge */}
+                  <div className="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none">
+                    <div className="w-10 h-10 rounded-xl bg-[#062B28]/90 backdrop-blur-md text-[#00C4FA] flex items-center justify-center border border-[#00C4FA]/30 shadow-md group-hover:scale-110 transition-transform">
+                      <item.icon className="w-5 h-5" />
+                    </div>
+                    <span className="text-[10px] font-bold text-[#D4AF37] bg-[#062B28]/90 backdrop-blur-md px-2.5 py-1 rounded-full border border-[#D4AF37]/30 shadow-sm">
+                      {item.stayDuration}
+                    </span>
                   </div>
-                  <span className="text-[11px] font-semibold text-[#D4AF37] bg-[#062B28]/90 px-2.5 py-1 rounded-full border border-[#D4AF37]/30">
-                    {item.stayDuration}
-                  </span>
+
+                  {/* AI Visual Tag */}
+                  <div className="absolute bottom-2 left-3 flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-[10px] text-gray-200 font-medium">
+                    <Sparkles className="w-3 h-3 text-[#00C4FA]" />
+                    <span>AI Visual Specialty</span>
+                  </div>
                 </div>
 
                 {/* Titles */}
@@ -249,7 +276,7 @@ export default function Treatments() {
               {/* Action Button */}
               <button
                 onClick={scrollToForm}
-                className="w-full py-2.5 rounded-2xl border border-[#062B28]/20 group-hover:border-[#062B28] group-hover:bg-[#062B28] group-hover:text-white text-[#062B28] text-xs font-bold transition-all duration-300 flex items-center justify-center gap-2"
+                className="w-full py-2.5 rounded-2xl border border-[#062B28]/20 dark:border-white/20 group-hover:border-[#062B28] dark:group-hover:border-[#00C4FA] group-hover:bg-[#062B28] dark:group-hover:bg-[#00C4FA] group-hover:text-white dark:group-hover:text-[#062B28] text-[#062B28] dark:text-white text-xs font-bold transition-all duration-300 flex items-center justify-center gap-2"
               >
                 <span>{lang === 'ar' ? 'طلب تقييم الحالة' : 'Inquire for this Treatment'}</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -263,9 +290,9 @@ export default function Treatments() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-12 p-8 rounded-3xl bg-[#062B28] text-white border-2 border-[#D4AF37]/40 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl"
+          className="mt-12 p-8 rounded-3xl bg-[#062B28] text-white border-2 border-[#D4AF37]/40 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl relative overflow-hidden"
         >
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 relative z-10">
             <div className="w-12 h-12 rounded-2xl bg-[#00C4FA]/20 border border-[#00C4FA]/30 text-[#00C4FA] flex items-center justify-center flex-shrink-0">
               <HelpCircle className="w-6 h-6" />
             </div>
@@ -281,7 +308,7 @@ export default function Treatments() {
 
           <button
             onClick={scrollToForm}
-            className="px-6 py-3 rounded-full bg-gradient-to-r from-[#00C4FA] to-[#00A2D9] text-[#062B28] font-bold text-xs whitespace-nowrap shadow-lg shadow-[#00C4FA]/20 hover:scale-105 transition-transform"
+            className="px-6 py-3 rounded-full bg-gradient-to-r from-[#00C4FA] to-[#00A2D9] text-[#062B28] font-bold text-xs whitespace-nowrap shadow-lg shadow-[#00C4FA]/20 hover:scale-105 transition-transform relative z-10"
           >
             {t.nav.bookAppointment}
           </button>

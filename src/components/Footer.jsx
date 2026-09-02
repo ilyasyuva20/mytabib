@@ -3,6 +3,8 @@ import { Phone, Mail, MapPin, Globe, ShieldCheck } from 'lucide-react';
 import Logo from './Logo';
 import { useLanguage } from '../context/LanguageContext';
 import WhatsAppIcon from './WhatsAppIcon';
+import InstagramIcon from './InstagramIcon';
+import YouTubeIcon from './YouTubeIcon';
 
 export default function Footer() {
   const { lang, t } = useLanguage();
@@ -48,28 +50,49 @@ export default function Footer() {
             </div>
           </a>
 
-          {/* Contact Item 2: Secondary Phone */}
+          {/* Contact Item 2: Instagram Page */}
           <a
-            href="https://wa.me/919745578473?text=Hello%20mytabib,%20I%20would%20like%20to%20inquire%20about%20medical%20care."
+            href="https://www.instagram.com/my_tabib"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#00C4FA] transition-all duration-300 group flex items-start gap-4"
+            className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#ee2a7b] transition-all duration-300 group flex items-start gap-4"
           >
-            <div className="w-12 h-12 rounded-xl bg-[#00C4FA]/15 border border-[#00C4FA]/30 text-[#00C4FA] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-              <Phone className="w-6 h-6" />
+            <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-[#f9ce34]/20 via-[#ee2a7b]/20 to-[#6228d7]/20 border border-[#ee2a7b]/40 text-[#ee2a7b] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+              <InstagramIcon className="w-6 h-6" />
             </div>
             <div>
-              <span className="text-xs text-gray-400 block mb-1">Secondary Coordination Line</span>
-              <span className="text-base font-bold text-white group-hover:text-[#00C4FA] transition-colors">
-                +91 97455 78473
+              <span className="text-xs text-gray-400 block mb-1">Instagram Official Page</span>
+              <span className="text-base font-bold text-white group-hover:text-[#ee2a7b] transition-colors">
+                @my_tabib
               </span>
               {lang === 'ar' && (
-                <span className="text-[11px] text-[#00C4FA] block font-arabic mt-1">خط التنسيق الثانوي</span>
+                <span className="text-[11px] text-[#00C4FA] block font-arabic mt-1">تابعنا على إنستغرام</span>
               )}
             </div>
           </a>
 
-          {/* Contact Item 3: Email */}
+          {/* Contact Item 3: YouTube Channel */}
+          <a
+            href="https://www.youtube.com/@_mytabib"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#FF0000] transition-all duration-300 group flex items-start gap-4"
+          >
+            <div className="w-12 h-12 rounded-xl bg-[#FF0000]/15 border border-[#FF0000]/30 text-[#FF0000] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+              <YouTubeIcon className="w-6 h-6" />
+            </div>
+            <div>
+              <span className="text-xs text-gray-400 block mb-1">YouTube Official Channel</span>
+              <span className="text-base font-bold text-white group-hover:text-[#FF0000] transition-colors">
+                @_mytabib
+              </span>
+              {lang === 'ar' && (
+                <span className="text-[11px] text-[#00C4FA] block font-arabic mt-1">قناة اليوتيوب الرسمية</span>
+              )}
+            </div>
+          </a>
+
+          {/* Contact Item 4: Email */}
           <a
             href="mailto:mytabib@outlook.com"
             className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#D4AF37] transition-all duration-300 group flex items-start gap-4"
@@ -88,20 +111,6 @@ export default function Footer() {
             </div>
           </a>
 
-          {/* Contact Item 4: Location & Languages */}
-          <div className="p-6 rounded-2xl bg-white/5 border border-white/10 flex items-start gap-4">
-            <div className="w-12 h-12 rounded-xl bg-white/10 text-white flex items-center justify-center flex-shrink-0">
-              <MapPin className="w-6 h-6 text-[#00C4FA]" />
-            </div>
-            <div>
-              <span className="text-xs text-gray-400 block mb-1">Location & Languages</span>
-              <span className="text-sm font-bold text-white block">Kerala, India 🌴</span>
-              <span className="text-[11px] text-[#D4AF37] font-semibold block mt-1">
-                {t.contact.languages}
-              </span>
-            </div>
-          </div>
-
         </div>
 
         {/* Main Footer Links & Branding */}
@@ -115,9 +124,36 @@ export default function Footer() {
               mytabib is a dedicated medical concierge and healthcare travel coordinator operating in Kerala, India. We empower international patients—especially from GCC countries—with seamless hospital matching, native Arabic support, and complete travel care.
             </p>
 
-            <div className="flex items-center gap-2 text-xs text-[#00C4FA] bg-white/5 p-3 rounded-xl border border-white/10 w-fit">
-              <Globe className="w-4 h-4" />
-              <span>{lang === 'ar' ? 'خدمات علاجية وسياحة طبية فاخرة في كيرالا، الهند' : 'Luxury Medical Care & Travel Concierge in Kerala, India'}</span>
+            <div className="flex flex-wrap items-center gap-3">
+              <a
+                href="https://wa.me/918547842167?text=Hello%20mytabib,%20I%20would%20like%20to%20inquire%20about%20medical%20care."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-xs text-white bg-[#25D366]/15 border border-[#25D366]/40 hover:border-[#25D366] px-3.5 py-3 rounded-xl transition-colors font-bold"
+              >
+                <WhatsAppIcon className="w-4 h-4 text-[#25D366]" />
+                <span>+91 85478 42167</span>
+              </a>
+
+              <a
+                href="https://www.instagram.com/my_tabib"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-xs text-white bg-gradient-to-r from-[#f9ce34]/20 via-[#ee2a7b]/20 to-[#6228d7]/20 border border-[#ee2a7b]/40 hover:border-[#ee2a7b] px-3.5 py-3 rounded-xl transition-colors font-bold"
+              >
+                <InstagramIcon className="w-4 h-4 text-[#ee2a7b]" />
+                <span>@my_tabib</span>
+              </a>
+
+              <a
+                href="https://www.youtube.com/@_mytabib"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-xs text-white bg-[#FF0000]/15 border border-[#FF0000]/40 hover:border-[#FF0000] px-3.5 py-3 rounded-xl transition-colors font-bold"
+              >
+                <YouTubeIcon className="w-4 h-4 text-[#FF0000]" />
+                <span>@_mytabib</span>
+              </a>
             </div>
           </div>
 
@@ -175,16 +211,53 @@ export default function Footer() {
 
       </div>
 
-      {/* Docked Floating WhatsApp Button at Bottom Right */}
-      <a
-        href="https://wa.me/918547842167?text=Hello%20mytabib%20team,%20I%20would%20like%20to%20inquire%20about%20medical%20treatment%20in%20Kerala."
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-2xl shadow-[#25D366]/40 hover:scale-110 active:scale-95 transition-transform duration-300 border-2 border-white"
-        aria-label="Direct WhatsApp Chat"
-      >
-        <WhatsAppIcon className="w-7 h-7" />
-      </a>
+      {/* Docked Floating Social Action Buttons at Bottom Right (YouTube, Instagram & WhatsApp) */}
+      <div className="fixed bottom-6 right-6 z-50 flex flex-col items-center gap-3">
+        {/* Floating YouTube Channel Button */}
+        <a
+          href="https://www.youtube.com/@_mytabib"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-[#FF0000] text-white shadow-2xl shadow-[#FF0000]/40 hover:scale-110 active:scale-95 transition-all duration-300 border-2 border-white group relative"
+          aria-label="Visit YouTube @_mytabib"
+        >
+          <YouTubeIcon className="w-6 h-6 sm:w-7 sm:h-7" />
+          {/* Tooltip */}
+          <span className="absolute right-full mr-3 px-2.5 py-1 rounded-lg bg-black/90 text-white text-[11px] font-bold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-lg border border-white/20">
+            YouTube @_mytabib
+          </span>
+        </a>
+
+        {/* Floating Instagram Icon Button */}
+        <a
+          href="https://www.instagram.com/my_tabib"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white shadow-2xl shadow-[#ee2a7b]/40 hover:scale-110 active:scale-95 transition-all duration-300 border-2 border-white group relative"
+          aria-label="Visit Instagram @my_tabib"
+        >
+          <InstagramIcon className="w-6 h-6 sm:w-7 sm:h-7" />
+          {/* Tooltip */}
+          <span className="absolute right-full mr-3 px-2.5 py-1 rounded-lg bg-black/90 text-white text-[11px] font-bold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-lg border border-white/20">
+            Instagram @my_tabib
+          </span>
+        </a>
+
+        {/* Floating WhatsApp Button */}
+        <a
+          href="https://wa.me/918547842167?text=Hello%20mytabib%20team,%20I%20would%20like%20to%20inquire%20about%20medical%20treatment%20in%20Kerala."
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-[#25D366] text-white shadow-2xl shadow-[#25D366]/40 hover:scale-110 active:scale-95 transition-all duration-300 border-2 border-white group relative"
+          aria-label="Direct WhatsApp Chat"
+        >
+          <WhatsAppIcon className="w-6 h-6 sm:w-7 sm:h-7" />
+          {/* Tooltip */}
+          <span className="absolute right-full mr-3 px-2.5 py-1 rounded-lg bg-black/90 text-white text-[11px] font-bold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-lg border border-white/20">
+            WhatsApp Us
+          </span>
+        </a>
+      </div>
     </footer>
   );
 }

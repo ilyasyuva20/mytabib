@@ -4,12 +4,14 @@ import { Calendar, Menu, X, Globe } from 'lucide-react';
 import Logo from './Logo';
 import { useLanguage } from '../context/LanguageContext';
 import WhatsAppIcon from './WhatsAppIcon';
+import InstagramIcon from './InstagramIcon';
+import YouTubeIcon from './YouTubeIcon';
 
 export default function Navbar() {
   const { lang, toggleLanguage, t } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('about');
+  const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,28 +22,30 @@ export default function Navbar() {
       }
 
       // Active section tracking
-      const sections = ['about', 'services', 'treatments', 'testimonials', 'contact'];
-      const scrollPosition = window.scrollY + 200;
+      const sections = ['home', 'about', 'services', 'treatments', 'testimonials', 'contact'];
+      const scrollPosition = window.scrollY + 250;
 
+      let foundSection = 'home';
       for (const section of sections) {
         const el = document.getElementById(section);
         if (el) {
           const top = el.offsetTop;
           const height = el.offsetHeight;
           if (scrollPosition >= top && scrollPosition < top + height) {
-            setActiveSection(section);
+            foundSection = section;
             break;
           }
         }
       }
+      setActiveSection(foundSection);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Removed 'home' per user request - clicking the Logo serves as Home
   const navLinks = [
+    { id: 'home', label: t.nav.home, arLabel: 'الرئيسية' },
     { id: 'about', label: t.nav.about, arLabel: 'من نحن' },
     { id: 'services', label: t.nav.services, arLabel: 'خدماتنا' },
     { id: 'treatments', label: t.nav.treatments, arLabel: 'التخصصات' },
@@ -102,8 +106,30 @@ export default function Navbar() {
             })}
           </div>
 
-          {/* Right Action CTAs: Language Switcher & Book Appointment Pill */}
+          {/* Right Action CTAs: Language Switcher, Social Icons & Book Appointment Pill */}
           <div className="hidden sm:flex items-center gap-3">
+            {/* Social Quick Links */}
+            <div className="hidden md:flex items-center gap-2 pr-2 border-r border-white/15">
+              <a
+                href="https://www.youtube.com/@_mytabib"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-1.5 rounded-full hover:bg-[#FF0000]/20 text-gray-300 hover:text-[#FF0000] transition-colors"
+                title="YouTube @_mytabib"
+              >
+                <YouTubeIcon className="w-4 h-4" />
+              </a>
+              <a
+                href="https://www.instagram.com/my_tabib"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-1.5 rounded-full hover:bg-[#ee2a7b]/20 text-gray-300 hover:text-[#ee2a7b] transition-colors"
+                title="Instagram @my_tabib"
+              >
+                <InstagramIcon className="w-4 h-4" />
+              </a>
+            </div>
+
             {/* Language Switcher */}
             <button
               onClick={toggleLanguage}
@@ -183,15 +209,35 @@ export default function Navbar() {
                   <span>{t.nav.bookAppointment}</span>
                 </button>
 
-                <a
-                  href="https://wa.me/918547842167?text=Hello%20mytabib%20team,%20I%20would%20like%20to%20inquire%20about%20medical%20treatment%20in%20Kerala."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full py-3 rounded-full border border-[#25D366] text-[#25D366] font-semibold text-sm flex items-center justify-center gap-2 hover:bg-[#25D366]/10"
-                >
-                  <WhatsAppIcon className="w-4 h-4" />
-                  <span>WhatsApp (+91 85478 42167)</span>
-                </a>
+                <div className="flex items-center justify-center gap-3 pt-2">
+                  <a
+                    href="https://www.youtube.com/@_mytabib"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2.5 rounded-full bg-[#FF0000]/15 text-[#FF0000] border border-[#FF0000]/30 hover:scale-105 transition-transform"
+                    title="YouTube @_mytabib"
+                  >
+                    <YouTubeIcon className="w-4 h-4" />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/my_tabib"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2.5 rounded-full bg-gradient-to-tr from-[#f9ce34]/20 via-[#ee2a7b]/20 to-[#6228d7]/20 text-[#ee2a7b] border border-[#ee2a7b]/30 hover:scale-105 transition-transform"
+                    title="Instagram @my_tabib"
+                  >
+                    <InstagramIcon className="w-4 h-4" />
+                  </a>
+                  <a
+                    href="https://wa.me/918547842167?text=Hello%20mytabib%20team,%20I%20would%20like%20to%20inquire%20about%20medical%20treatment%20in%20Kerala."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2.5 rounded-full bg-[#25D366]/15 text-[#25D366] border border-[#25D366]/30 hover:scale-105 transition-transform"
+                    title="WhatsApp"
+                  >
+                    <WhatsAppIcon className="w-4 h-4" />
+                  </a>
+                </div>
               </div>
             </div>
           </motion.div>
