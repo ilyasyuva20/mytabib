@@ -106,16 +106,49 @@ export default function AppointmentForm() {
     setFiles(prev => prev.filter((_, i) => i !== index));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate High-Trust API Booking Submission
-    setTimeout(() => {
-      setReferenceId(`#MYT-${Math.floor(100000 + Math.random() * 900000)}`);
+    const formDataObj = new FormData();
+    // Use clear field names for the email formatting
+    formDataObj.append("Name", formData.fullName);
+    formDataObj.append("Email", formData.email);
+    formDataObj.append("WhatsApp", `${formData.countryCode} ${formData.whatsapp}`);
+    formDataObj.append("Country", formData.country);
+    formDataObj.append("Required Treatment", formData.specialty);
+    formDataObj.append("Preferred Language", formData.language);
+    formDataObj.append("Medical Notes", formData.notes || "None provided");
+    formDataObj.append("_subject", `New Medical Request: ${formData.fullName}`);
+
+    // Append medical files
+    files.forEach((file, index) => {
+      formDataObj.append(`Medical_Report_${index + 1}`, file);
+    });
+
+    try {
+      // Send directly to the provided email using FormSubmit
+      const response = await fetch("https://formsubmit.co/ajax/mytabib@outlook.com", {
+        method: "POST",
+        body: formDataObj,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        setReferenceId(`#MYT-${Math.floor(100000 + Math.random() * 900000)}`);
+        setIsSubmitting(false);
+        setIsSubmitted(true);
+      } else {
+        alert("There was an issue sending your request. Please try again or contact via WhatsApp.");
+        setIsSubmitting(false);
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      alert("A network error occurred. Please try again or contact via WhatsApp.");
       setIsSubmitting(false);
-      setIsSubmitted(true);
-    }, 1500);
+    }
   };
 
   return (
