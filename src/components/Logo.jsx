@@ -4,12 +4,12 @@ import { useLanguage } from '../context/LanguageContext';
 export default function Logo({ size = 'medium', variant = 'dark', showTagline = false, className = '' }) {
   const { lang } = useLanguage();
 
-  // Balanced size presets - adjusted to be slightly smaller and well-proportioned
+  // Balanced size presets - optimized for mobile clarity and desktop elegance
   const sizeClasses = {
-    small: 'h-10 sm:h-9',
-    medium: 'h-13 sm:h-13',
-    large: 'h-16 sm:h-16',
-    xlarge: 'h-20 sm:h-22'
+    small: 'h-8 sm:h-9',
+    medium: 'h-11 sm:h-12',
+    large: 'h-14 sm:h-16',
+    xlarge: 'h-18 sm:h-22'
   };
 
   const isDarkBg = variant === 'dark' || variant === 'emerald';
