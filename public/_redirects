@@ -1,3 +1,4 @@
 # Redirect HTTP to HTTPS automatically
-http://mytabib.in/* https://mytabib.in/:splat 301!
-http://www.mytabib.in/* https://mytabib.in/:splat 301!
+http://mytabib.in/* https://mytabib.in/:splat 301
+http://www.mytabib.in/* https://mytabib.in/:splat 301
+
