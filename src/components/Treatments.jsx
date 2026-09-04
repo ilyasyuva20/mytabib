@@ -14,49 +14,69 @@ export default function Treatments() {
     {
       id: 'ortho',
       category: 'Surgical',
-      nameEn: 'Orthopaedics & Joint Care',
-      nameAr: 'جراحة العظام والمفاصل',
-      descEn: 'Robotic knee & hip replacements, complex fracture reconstruction, and arthroscopic sports medicine.',
-      descAr: "استبدال الركبة والحوض بالروبوت، ترميم الكسور المعقدة، وجراحات المناظير الرياضية.",
+      nameEn: 'Orthopaedics & Joint Replacement',
+      nameAr: 'جراحة العظام واستبدال المفاصل',
+      descEn: 'Advanced care for joint problems, arthritis, sports injuries and complex orthopaedic conditions.',
+      descAr: 'رعاية متقدمة لمشاكل المفاصل والتهاباتها وإصابات الملاعب والحالات المعقدة.',
       icon: Bone,
       image: "/treatments/treatment_ortho.png",
-      highlights: ['Robotic Knee Replacement', 'Hip Resurfacing', 'Spinal Fusion'],
+      highlights: [
+        'Robotic Knee Replacement',
+        'Total Hip Replacement',
+        'Arthroscopy & Sports Injuries',
+        'Complex Joint Reconstruction'
+      ],
       stayDuration: '7 - 14 Days Recovery'
     },
     {
       id: 'spine',
       category: 'Surgical',
-      nameEn: 'Spine & Neurosurgery',
-      nameAr: 'جراحة العمود الفقري والأعصاب',
-      descEn: 'Minimally invasive spine surgery (MISS), disc replacement, and neuro-oncology interventions.',
-      descAr: "جراحات العمود الفقري بالمناظير التدخلية، استبدال الديسك، وجراحات الأورام العصبية.",
+      nameEn: 'Spine Care',
+      nameAr: 'رعاية وجراحة العمود الفقري',
+      descEn: 'Advanced diagnosis and minimally invasive treatment for back, neck and spinal disorders.',
+      descAr: 'تشخيص متقدم وعلاج طفيف التوغل لاضطرابات الظهر والرقبة والعمود الفقري.',
       icon: Activity,
       image: "/treatments/treatment_spine.png",
-      highlights: ['Micro-Discectomy', 'Spinal Decompression', 'Brain Tumor Resection'],
+      highlights: [
+        'Endoscopic / Minimally Invasive Spine Surgery',
+        'Microdiscectomy',
+        'Spinal Decompression & Fusion',
+        'Cervical Disc Replacement'
+      ],
       stayDuration: '10 - 18 Days Recovery'
     },
     {
-      id: 'dental',
-      category: 'Cosmetic & Care',
-      nameEn: 'Dental Care & Surgery',
-      nameAr: 'طب وتجميل الأسنان الجراحي',
-      descEn: 'All-on-4 / All-on-6 dental implants, full mouth rehabilitation, and aesthetic smile designing.',
-      descAr: "زراعة الأسنان الفورية All-on-4/6، إعادة تأهيل الفك الكامل، وتصميم الابتسامة التجميلية.",
-      icon: Smile,
-      image: "/treatments/treatment_dental.png",
-      highlights: ['Zirconia Implants', 'Full Mouth Rehab', 'Maxillofacial Surgery'],
-      stayDuration: '3 - 7 Days'
+      id: 'brain',
+      category: 'Surgical',
+      nameEn: 'Brain & Neurosurgery',
+      nameAr: 'جراحة المخ والأعصاب',
+      descEn: 'Specialist neurosurgical care for complex brain and neurological conditions.',
+      descAr: 'رعاية متخصصة في جراحة الأعصاب للحالات المعقدة للدماغ والجهاز العصبي.',
+      icon: Activity,
+      image: "/services/service_hospital.png",
+      highlights: [
+        'Brain Tumour Surgery',
+        'Endoscopic Skull Base Surgery',
+        'Brain Aneurysm Treatment',
+        'Epilepsy Surgery'
+      ],
+      stayDuration: '10 - 20 Days Recovery'
     },
     {
       id: 'cardio',
       category: 'Surgical',
       nameEn: 'Cardiology & Cardiac Surgery',
-      nameAr: 'أمراض وجراحة القلب والأوعية',
-      descEn: 'Coronary artery bypass grafting (CABG), TAVI, heart valve repair, and pediatric cardiology.',
-      descAr: "عمليات قلب المفتوح (CABG)، زراعة الصمامات بالقسطرة، وقسطرة الشرايين المعقدة.",
+      nameAr: 'أمراض وجراحة القلب',
+      descEn: 'Advanced heart care covering interventional cardiology and cardiac surgery.',
+      descAr: 'رعاية متقدمة للقلب تشمل قسطرة القلب وجراحات القلب المفتوح.',
       icon: Heart,
       image: "/treatments/treatment_cardio.png",
-      highlights: ['CABG Bypass', 'TAVI Valve Repair', 'Pediatric Heart Surgery'],
+      highlights: [
+        'Angioplasty & Stenting',
+        'Coronary Bypass Surgery (CABG)',
+        'TAVI / TAVR',
+        'Electrophysiology & Ablation'
+      ],
       stayDuration: '12 - 21 Days'
     },
     {
@@ -64,83 +84,118 @@ export default function Treatments() {
       category: 'Surgical',
       nameEn: 'Gastroenterology & Hepatology',
       nameAr: 'أمراض الجهاز الهضمي والكبد',
-      descEn: 'Advanced endoscopic procedures, liver transplant coordination, and GI oncology care.',
-      descAr: "مناظير الجهاز الهضمي المتقدمة، زراعة الكبد، وعلاج أورام القناة الهضمية.",
+      descEn: 'Specialist care for digestive, liver, pancreatic and gastrointestinal conditions.',
+      descAr: 'رعاية متخصصة لأمراض الجهاز الهضمي والكبد والبنكرياس والقناة الهضمية.',
       icon: Stethoscope,
       image: "/treatments/treatment_gastro.png",
-      highlights: ['Liver Transplant', 'ERCP Endoscopy', 'GI Surgery'],
+      highlights: [
+        'Advanced Endoscopy & ERCP',
+        'Liver & Pancreatic Care',
+        'Gastrointestinal Surgery',
+        'Liver Transplant Evaluation'
+      ],
       stayDuration: '14 - 28 Days'
     },
     {
-      id: 'bariatric',
-      category: 'Surgical',
-      nameEn: 'Bariatric & Weight-Loss Surgery',
-      nameAr: 'جراحات السمنة وتكميم المعدة',
-      descEn: 'Laparoscopic gastric sleeve, gastric bypass, and metabolic surgery for long-term weight wellness.',
-      descAr: "تكميم المعدة بالمنظار، تحويل المسار، وجراحات الأيض للتخلص من السمنة المفرطة.",
-      icon: Scale,
-      image: "/services/service_reports.png",
-      highlights: ['Laparoscopic Sleeve', 'Roux-en-Y Bypass', 'Post-Op Nutrition'],
-      stayDuration: '5 - 10 Days'
-    },
-    {
-      id: 'fertility',
-      category: 'Specialized',
-      nameEn: 'Fertility & IVF',
-      nameAr: 'علاج العقم والأخصاب المساعد (IVF)',
-      descEn: 'High success rate IVF, ICSI, genetic testing (PGD/PGS), and reproductive endocrinology.',
-      descAr: "تقنيات الحقن المجهري (IVF/ICSI)، الفحص الجيني للأجنة، وعلاج أسباب تأخر الإنجاب.",
-      icon: Sparkles,
-      image: "/services/service_consultation.png",
-      highlights: ['IVF / ICSI Cycles', 'Genetic Screening (PGD)', 'Male Infertility Care'],
-      stayDuration: '14 - 21 Days'
+      id: 'dental',
+      category: 'Cosmetic & Care',
+      nameEn: 'Dental Care & Full-Mouth Rehabilitation',
+      nameAr: 'العناية بالأسنان وإعادة تأهيل الفك الكامل',
+      descEn: 'Advanced dental solutions for implants, fixed teeth and complete smile rehabilitation.',
+      descAr: 'حلول أسنان متقدمة للزراعة والتركيبات الثابتة وتجميل الابتسامة الشامل.',
+      icon: Smile,
+      image: "/treatments/treatment_dental.png",
+      highlights: [
+        'Full-Mouth Dental Implants',
+        'All-on-4 / All-on-6 Implants',
+        'Immediate-Loading Fixed Zirconia Teeth',
+        'Full-Mouth Rehabilitation'
+      ],
+      stayDuration: '3 - 7 Days'
     },
     {
       id: 'eyecare',
       category: 'Specialized',
       nameEn: 'Ophthalmology & Eye Surgery',
-      nameAr: 'طب وجراحة العيون واللايزك',
-      descEn: 'Femto-LASIK, corneal transplants, advanced cataract phacoemulsification, and retinal surgery.',
-      descAr: "عمليات تصحيح النظر بالفيمتو لايزك، زراعة القرنية، وإزالة المياه البيضاء بأحدث التقنيات.",
+      nameAr: 'طب وجراحة العيون',
+      descEn: 'Advanced diagnosis and surgical treatment for vision and eye-related conditions.',
+      descAr: 'تشخيص متقدم وعلاج جراحي لمشاكل الإبصار وأمراض العيون.',
       icon: Eye,
       image: "/services/service_hospital.png",
-      highlights: ['Femto-LASIK', 'Cataract Phaco', 'Retinal Detachment Repair'],
+      highlights: [
+        'Cataract Surgery',
+        'LASIK / SMILE Vision Correction',
+        'Retina & Vitreous Surgery',
+        'Glaucoma Treatment'
+      ],
       stayDuration: '3 - 7 Days'
-    },
-    {
-      id: 'ent',
-      category: 'Specialized',
-      nameEn: 'ENT & Head & Neck Surgery',
-      nameAr: 'أمراض الأذن وأنف وحنجرة',
-      descEn: 'Cochlear implant surgery, endoscopic sinus surgery, and vocal cord restoration.',
-      descAr: "زراعة القوقعة للأطفال والكبار، جراحات الجيوب الأنفية بالمناظير، وجراحات الحنجرة.",
-      icon: Ear,
-      image: "/services/service_reports.png",
-      highlights: ['Cochlear Implants', 'Endoscopic Sinus', 'Tonsillectomy'],
-      stayDuration: '4 - 8 Days'
     },
     {
       id: 'ayurveda',
       category: 'Kerala Specialty',
       nameEn: 'Ayurveda & Rehabilitation',
-      nameAr: 'الطب الطبيعي التراثي وإعادة التأهيل (كيرالا)',
-      descEn: 'Authentic Kerala NABH-accredited Ayurvedic treatments, post-stroke rehab, and joint wellness.',
-      descAr: "العلاج الطبيعي والتأهيلي بالطب الشعبي الهندي التقليدي المعتمد (الآيورفيدا) للتعافي الشامل.",
+      nameAr: 'الطب الطبيعي (الآيورفيدا) وإعادة التأهيل',
+      descEn: 'Personalized rehabilitation programs combining recovery support, physiotherapy and Ayurveda.',
+      descAr: 'برامج تأهيلية مخصصة تجمع بين دعم التعافي، العلاج الطبيعي، والآيورفيدا.',
       icon: Leaf,
       image: "/services/service_recovery.png",
-      highlights: ['Panchakarma Detox', 'Post-Stroke Rehab', 'Arthritis Management'],
+      highlights: [
+        'Post-Stroke Rehabilitation',
+        'Neurological Rehabilitation',
+        'Musculoskeletal Rehabilitation',
+        'Spine & Joint Rehabilitation'
+      ],
       stayDuration: '14 - 28 Days Wellness'
+    },
+    {
+      id: 'fertility',
+      category: 'Specialized',
+      nameEn: 'Fertility & IVF',
+      nameAr: 'علاج العقم والإخصاب المساعد (IVF)',
+      descEn: 'Advanced fertility evaluation and assisted reproductive treatment for couples.',
+      descAr: 'تقييم متقدم للخصوبة وتقنيات المساعدة على الإنجاب للزوجين.',
+      icon: Sparkles,
+      image: "/services/service_consultation.png",
+      highlights: [
+        'IVF & ICSI',
+        'Preimplantation Genetic Testing (PGT)',
+        'Male & Female Infertility Care',
+        'Fertility Preservation'
+      ],
+      stayDuration: '14 - 21 Days'
+    },
+    {
+      id: 'ent',
+      category: 'Specialized',
+      nameEn: 'ENT & Head & Neck Care',
+      nameAr: 'أنف وأذن وحنجرة ورعاية الرأس والرقبة',
+      descEn: 'Advanced treatment for ear, nose, throat, hearing and head & neck conditions.',
+      descAr: 'علاج متقدم لأمراض الأذن والأنف والحنجرة والسمع وجراحات الرأس والرقبة.',
+      icon: Ear,
+      image: "/services/service_reports.png",
+      highlights: [
+        'Cochlear Implantation',
+        'Endoscopic Sinus Surgery',
+        'Ear & Hearing Surgery',
+        'Head & Neck Surgery'
+      ],
+      stayDuration: '4 - 8 Days'
     },
     {
       id: 'custom',
       category: 'Specialized',
       nameEn: 'Other Specialized Treatments',
       nameAr: 'تخصصات وعلاجات أخرى مخصصة',
-      descEn: 'Oncology, Urology, Dermatology, and Pediatric Surgeries. Submit your medical reports for customized review.',
-      descAr: "علاج الأورام، المسالك البولية، الجلدية، وجراحة الأطفال. تواصل معنا لإجراء تقييم شامل.",
+      descEn: 'Access specialist care across additional medical disciplines based on your individual requirements.',
+      descAr: 'الوصول إلى رعاية متخصصة عبر تخصصات طبية إضافية بناءً على احتياجاتك الفردية.',
       icon: HelpCircle,
       image: "/services/service_consultation.png",
-      highlights: ['Oncology & Chemo', 'Urology & Kidney Stone', 'Custom Medical Review'],
+      highlights: [
+        'Oncology Care',
+        'Urology & Kidney Stone Care',
+        'Endocrinology & Diabetes',
+        'Paediatric Specialties'
+      ],
       stayDuration: 'Varies by Case'
     }
   ];

@@ -15,7 +15,7 @@ export default function AppointmentForm() {
     countryCode: '+966',
     whatsapp: '',
     email: '',
-    specialty: 'Orthopaedics & Joint Care',
+    specialty: 'Orthopaedics & Joint Replacement',
     language: 'Arabic',
     notes: ''
   });
@@ -41,17 +41,17 @@ export default function AppointmentForm() {
   ];
 
   const specialties = [
-    'Orthopaedics & Joint Care',
-    'Spine & Neurosurgery',
-    'Dental Care & Surgery',
+    'Orthopaedics & Joint Replacement',
+    'Spine Care',
+    'Brain & Neurosurgery',
     'Cardiology & Cardiac Surgery',
     'Gastroenterology & Hepatology',
-    'Bariatric & Weight-Loss Surgery',
-    'Fertility & IVF',
+    'Dental Care & Full-Mouth Rehabilitation',
     'Ophthalmology & Eye Surgery',
-    'ENT & Head/Neck Surgery',
-    'Ayurveda & Rehabilitation (Kerala)',
-    'Other Specialized Evaluation'
+    'Ayurveda & Rehabilitation',
+    'Fertility & IVF',
+    'ENT & Head & Neck Care',
+    'Other Specialized Treatments'
   ];
 
   const handleInputChange = (e) => {
