@@ -53,7 +53,7 @@ export default function Treatments() {
       descEn: 'Specialist neurosurgical care for complex brain and neurological conditions.',
       descAr: 'رعاية متخصصة في جراحة الأعصاب للحالات المعقدة للدماغ والجهاز العصبي.',
       icon: Activity,
-      image: "/services/service_hospital.png",
+      image: "/treatments/treatment_brain.png",
       highlights: [
         'Brain Tumour Surgery',
         'Endoscopic Skull Base Surgery',
@@ -121,7 +121,7 @@ export default function Treatments() {
       descEn: 'Advanced diagnosis and surgical treatment for vision and eye-related conditions.',
       descAr: 'تشخيص متقدم وعلاج جراحي لمشاكل الإبصار وأمراض العيون.',
       icon: Eye,
-      image: "/services/service_hospital.png",
+      image: "/treatments/treatment_eye.png",
       highlights: [
         'Cataract Surgery',
         'LASIK / SMILE Vision Correction',
@@ -155,7 +155,7 @@ export default function Treatments() {
       descEn: 'Advanced fertility evaluation and assisted reproductive treatment for couples.',
       descAr: 'تقييم متقدم للخصوبة وتقنيات المساعدة على الإنجاب للزوجين.',
       icon: Sparkles,
-      image: "/services/service_consultation.png",
+      image: "/treatments/treatment_ivf.png",
       highlights: [
         'IVF & ICSI',
         'Preimplantation Genetic Testing (PGT)',
@@ -172,7 +172,7 @@ export default function Treatments() {
       descEn: 'Advanced treatment for ear, nose, throat, hearing and head & neck conditions.',
       descAr: 'علاج متقدم لأمراض الأذن والأنف والحنجرة والسمع وجراحات الرأس والرقبة.',
       icon: Ear,
-      image: "/services/service_reports.png",
+      image: "/treatments/treatment_ent.png",
       highlights: [
         'Cochlear Implantation',
         'Endoscopic Sinus Surgery',

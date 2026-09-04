@@ -23,14 +23,14 @@ export default function App() {
           {/* Hero Section (#home) with Parallax Tilt & GCC Flight Arc */}
           <Hero />
 
-          {/* About Us Section (#about) */}
-          <AboutUs />
+          {/* Medical Specialties / Treatments Section (#treatments) */}
+          <Treatments />
 
-          {/* Our Services Section (#services) with 11 Concierge Services */}
+          {/* Our Services Section (#services) with 7 Concierge Services */}
           <OurServices />
 
-          {/* Treatments Section (#treatments) */}
-          <Treatments />
+          {/* About Us Section (#about) */}
+          <AboutUs />
 
           {/* Patient Testimonials Section (#testimonials) */}
           <Testimonials />

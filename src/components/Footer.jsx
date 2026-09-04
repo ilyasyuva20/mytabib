@@ -163,13 +163,13 @@ export default function Footer() {
               {t.contact.quickLinks}
             </h4>
             <ul className="space-y-2.5 text-xs text-gray-300">
-              {['home', 'about', 'services', 'treatments', 'testimonials', 'appointment'].map((id) => (
+              {['home', 'treatments', 'services', 'about', 'testimonials', 'appointment'].map((id) => (
                 <li key={id}>
                   <button
                     onClick={() => scrollTo(id)}
                     className="hover:text-[#00C4FA] transition-colors flex items-center gap-1 capitalize"
                   >
-                    <span>{id === 'home' ? 'Home' : id === 'about' ? 'About Us' : id === 'services' ? 'Our Services' : id === 'treatments' ? 'Medical Specialties' : id === 'testimonials' ? 'Patient Testimonials' : 'Book Appointment'}</span>
+                    <span>{id === 'home' ? 'Home' : id === 'treatments' ? 'Medical Specialties' : id === 'services' ? 'Our Services' : id === 'about' ? 'About Us' : id === 'testimonials' ? 'Patient Testimonials' : 'Book Appointment'}</span>
                   </button>
                 </li>
               ))}

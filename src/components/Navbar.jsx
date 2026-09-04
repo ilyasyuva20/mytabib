@@ -22,7 +22,7 @@ export default function Navbar() {
       }
 
       // Active section tracking
-      const sections = ['home', 'about', 'services', 'treatments', 'testimonials', 'contact'];
+      const sections = ['home', 'treatments', 'services', 'about', 'testimonials', 'contact'];
       const scrollPosition = window.scrollY + 250;
 
       let foundSection = 'home';
@@ -46,9 +46,9 @@ export default function Navbar() {
 
   const navLinks = [
     { id: 'home', label: t.nav.home, arLabel: 'الرئيسية' },
-    { id: 'about', label: t.nav.about, arLabel: 'من نحن' },
-    { id: 'services', label: t.nav.services, arLabel: 'خدماتنا' },
     { id: 'treatments', label: t.nav.treatments, arLabel: 'التخصصات' },
+    { id: 'services', label: t.nav.services, arLabel: 'خدماتنا' },
+    { id: 'about', label: t.nav.about, arLabel: 'من نحن' },
     { id: 'testimonials', label: t.nav.testimonials, arLabel: 'تجارب المرضى' },
     { id: 'contact', label: t.nav.contact, arLabel: 'اتصل بنا' }
   ];

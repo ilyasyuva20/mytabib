@@ -13,61 +13,28 @@ export default function OurServices() {
   const servicesList = [
     {
       id: 1,
-      titleEn: "Medical Consultation Coordination",
-      titleAr: "تنسيق الاستشارات الطبية الأولية",
-      descEn: "Initial tele-consultation with leading Kerala specialists to discuss symptoms, diagnosis, and preliminary treatment advice.",
-      descAr: "استشارة طبية أولية عبر الاتصال المرئي مع كبار الاستشاريين في كيرالا لمناقشة التشخيص وخطة العلاج.",
-      icon: Stethoscope,
-      image: "/services/service_consultation.png",
-      highlight: false,
-      details: ["Review of symptoms prior to travel", "Video call setup with Chief Specialist", "Pre-admission clinical guidance"]
-    },
-    {
-      id: 2,
-      titleEn: "Medical Report & Treatment Plan Coordination",
-      titleAr: "تقييم التقارير وإعداد الخطة العلاجية",
-      descEn: "Comprehensive translation and evaluation of your medical files by top hospital boards with cost estimates.",
-      descAr: "ترجمة وتقييم شامل لتقاريرك الطبية من قبل لجان المستشفيات المختصة مع تقديم تقدير تكلفة معتمد.",
-      icon: FileText,
-      image: "/services/service_reports.png",
-      highlight: false,
-      details: ["Official hospital cost estimation", "Multi-disciplinary doctor review", "Dual Arabic-English report breakdown"]
-    },
-    {
-      id: 3,
-      titleEn: "Hospital & Doctor Coordination",
-      titleAr: "اختيار وتنسيق المستشفى والطبيب",
-      descEn: "Direct access to NABH/JCI accredited centers of excellence and renowned senior surgeons across Kerala.",
-      descAr: "ربط مباشر بأفضل المستشفيات المعتمدة دولياً وأبرز كبار الجراحين في ولاية كيرالا.",
-      icon: Building2,
-      image: "/services/service_hospital.png",
-      highlight: false,
-      details: ["JCI & NABH accredited hospitals", "Direct doctor appointment confirmation", "Second medical opinion options"]
-    },
-    {
-      id: 4,
-      titleEn: "Appointment Scheduling",
-      titleAr: "جدولة وتحديد المواعيد الطبية",
-      descEn: "Priority queue placement ensuring zero waiting time upon your arrival at the hospital clinic.",
-      descAr: "حجز مواعيد أولوية تضمن عدم الانتظار والدخول المباشر للطبيب فور وصولك كيرالا.",
-      icon: Calendar,
-      image: "/services/service_reports.png",
-      highlight: false,
-      details: ["Priority patient queueing", "Flexible rescheduling support", "Surgical theatre slot lock"]
-    },
-    {
-      id: 5,
-      titleEn: "Medical Travel & Visa Assistance",
+      titleEn: "Medical Visa & Travel Assistance",
       titleAr: "تسهيل التأشيرة الطبية وترتيبات السفر",
-      descEn: "Fast-track Medical Visa invitation letters issued by certified hospitals to ensure quick embassy approval.",
-      descAr: "إصدار خطابات الدعوة الطبية الرسمية للتأشيرة السريعة مع متابعة وإرشاد سفارات كيرالا.",
+      descEn: "Fast-track Medical Visa invitation letters issued by certified hospitals to ensure quick embassy approval and flight planning.",
+      descAr: "إصدار خطابات الدعوة الطبية الرسمية للتأشيرة السريعة مع متابعة وإرشاد سفارات كيرالا وتنسيق حجز الطيران.",
       icon: Plane,
       image: "/services/service_travel_visa.png",
       highlight: false,
       details: ["Official hospital invitation letter", "Attendant visa processing for family", "Flight itinerary coordination"]
     },
     {
-      id: 6,
+      id: 2,
+      titleEn: "Treatment Plan & Hospital Coordination",
+      titleAr: "تقييم التقارير وتنسيق المستشفى والخطة العلاجية",
+      descEn: "Comprehensive translation and evaluation of your medical files by top hospital boards with transparent cost estimates.",
+      descAr: "ترجمة وتقييم شامل لتقاريرك الطبية من قبل لجان المستشفيات المختصة واختيار المركز المناسب مع تقديم تقدير تكلفة معتمد.",
+      icon: Building2,
+      image: "/services/service_hospital.png",
+      highlight: false,
+      details: ["JCI & NABH accredited hospital selection", "Official hospital cost estimation", "Multi-disciplinary doctor board review"]
+    },
+    {
+      id: 3,
       titleEn: "Airport Pickup & Drop",
       titleAr: "الاستقبال والتوديع في المطار",
       descEn: "Warm VIP reception at Kochi / Trivandrum Airport with private vehicle transfer and dedicated assistant.",
@@ -78,7 +45,18 @@ export default function OurServices() {
       details: ["24/7 Flight tracking", "Private luxury vehicle transfer", "Wheelchair / ambulance assistance if needed"]
     },
     {
-      id: 7,
+      id: 4,
+      titleEn: "Hospital Appointment & Treatment Coordination",
+      titleAr: "حجز المواعيد وتنسيق العلاج الطبي",
+      descEn: "Priority queue placement ensuring zero waiting time and direct admission to renowned senior surgeons across Kerala.",
+      descAr: "حجز مواعيد أولوية تضمن عدم الانتظار والدخول المباشر لأبرز كبار الجراحين والاستشاريين.",
+      icon: Calendar,
+      image: "/services/service_consultation.png",
+      highlight: false,
+      details: ["Priority patient queueing", "Direct doctor appointment confirmation", "Surgical theatre slot lock"]
+    },
+    {
+      id: 5,
       titleEn: "Accommodation Assistance",
       titleAr: "ترتيبات الإقامة والسكن المريح",
       descEn: "Curated options from luxury hotels to fully furnished serviced apartments near hospital centers.",
@@ -89,9 +67,9 @@ export default function OurServices() {
       details: ["Kitchen-equipped apartments for families", "Proximity to medical centers", "Halal food & Arabic grocery access"]
     },
     {
-      id: 8,
-      titleEn: "Arabic Language Assistance",
-      titleAr: "المرافقة والترجمة باللغة العربية",
+      id: 6,
+      titleEn: "Arabic Language & Patient Support",
+      titleAr: "المرافقة والترجمة باللغة العربية والدعم الشخصي",
       descEn: "Full-time dedicated Arabic translator accompanying you during all doctor visits, procedures, and daily needs.",
       descAr: "مترجم ومرافق شخصي يتحدث العربية طوال فترة إقامتك وخلال جميع الجلسات والفحوصات الطبية.",
       icon: Languages,
@@ -100,37 +78,15 @@ export default function OurServices() {
       details: ["Native Arabic medical translators", "24/7 On-call translation hotline", "Prescription & discharge summary translation"]
     },
     {
-      id: 9,
-      titleEn: "Local Transportation",
-      titleAr: "المواصلات والنقل المحلي الخاص",
-      descEn: "Dedicated chauffeur-driven vehicle for hospital commutes, pharmacy trips, and local excursions.",
-      descAr: "سيارة خاصة وسائق تحت طلبك للتنقل اليومي بين مقر الإقامة، المستشفى، والصيدليات.",
-      icon: Navigation,
-      image: "/services/service_airport_pickup.png",
-      highlight: false,
-      details: ["Chauffeur on demand", "Discounts for long-stay patients", "Safe & clean climate-controlled vehicles"]
-    },
-    {
-      id: 10,
-      titleEn: "Treatment & Recovery Coordination",
-      titleAr: "تنسيق فترة العلاج والتعافي",
-      descEn: "Daily care management, nursing coordination, specialized dietary plans, and Kerala rehab options.",
-      descAr: "إدارة يومية للعناية، التنسيق مع التمريض، تقديم وجبات مخصصة، وجلسات إعادة التأهيل.",
+      id: 7,
+      titleEn: "Recovery & Post-Treatment Follow-Up",
+      titleAr: "متابعة التعافي والرعاية بعد العلاج",
+      descEn: "Continued connection with your treating doctor after returning home, plus daily rehab and post-op care coordination.",
+      descAr: "استمرار التواصل والمتابعة مع طبيبك المعالج بعد عودتك إلى وطنك وإدارة فترة التعافي والعلاج الطبيعي.",
       icon: HeartPulse,
       image: "/services/service_recovery.png",
       highlight: false,
-      details: ["In-hospital daily patient check-in", "Customized dietary management", "Post-op physiotherapy & Kerala wellness"]
-    },
-    {
-      id: 11,
-      titleEn: "Post-Treatment Follow-Up",
-      titleAr: "المتابعة الطبية بعد العودة للوطن",
-      descEn: "Continued connection with your treating doctor after you return home to monitor long-term recovery.",
-      descAr: "استمرار التواصل والمتابعة مع طبيبك المعالج بعد عودتك إلى وطنك لضمان تمام الشفاء.",
-      icon: ClipboardCheck,
-      image: "/services/service_consultation.png",
-      highlight: false,
-      details: ["Tele-consultation follow-up sessions", "Medication dispatch coordination", "Long-term medical record maintenance"]
+      details: ["Tele-consultation follow-up sessions", "Post-op physiotherapy & Kerala wellness", "Long-term medical record maintenance"]
     }
   ];
 
@@ -173,7 +129,7 @@ export default function OurServices() {
           </motion.p>
         </div>
 
-        {/* 11 Services Non-Cluttered Grid with AI Generated Images */}
+        {/* 7 Services Non-Cluttered Grid with AI Generated Images */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {servicesList.map((service, index) => {
             const isHighlight = service.highlight;

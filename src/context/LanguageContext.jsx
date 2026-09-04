@@ -46,7 +46,7 @@ export const translations = {
     },
     services: {
       title: "Support Throughout Your Medical Journey",
-      subtitle: "11 Comprehensive Concierge Services Tailored for International Patients",
+      subtitle: "7 Concierge Services Tailored for International Patients",
       highlightBadge: "Subtly Highlighted Arabic Assistance",
       timelineTitle: "Interactive Patient Journey Timeline"
     },
@@ -130,7 +130,7 @@ export const translations = {
     },
     services: {
       title: "دعم متكامل خلال رحلتك العلاجية",
-      subtitle: "11 خدمة تنسيقية مخصصة لراحة المرضى الدوليين وعائلاتهم",
+      subtitle: "7 خدمات تنسيقية مخصصة لراحة المرضى الدوليين وعائلاتهم",
       highlightBadge: "خدمة الترجمة والمرافقة العربية المتميزة",
       timelineTitle: "الجدول الزمني لرحلة المريض"
     },
